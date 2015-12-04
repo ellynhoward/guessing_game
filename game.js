@@ -72,6 +72,7 @@ quesThree();
 
 
 var total = i;
+
 console.log('total = ' + i);
 alert('You have answered ' + i + ' out of 3 correct!');
 
@@ -81,6 +82,7 @@ alert('You have answered ' + i + ' out of 3 correct!');
 alert('I am thinking of a number...');
 console.log('var user = ' + guess);
 var guess = prompt('Can you guess what it is?');
+
 
 var one = document.getElementById('four');
 function quesFour(){

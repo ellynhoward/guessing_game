@@ -46,3 +46,58 @@ var want = prompt('Is Seattle in Washington?')
 var total = i;
 console.log('total = ' + i)
 alert('You have answered ' + i + ' out of 3 correct!')
+
+// while loop portion
+
+alert('I am thinking of a number...');
+console.log('var user = ' + guess);
+var guess = prompt('Can you guess what it is?');
+
+var i = 3;
+var msg = ' ';
+
+    while(guess > i)
+    {
+      msg = ' you guessed ' + guess + ', that is too high ';
+      alert(user + msg);
+      guess = prompt(' guess again! ');
+    }
+
+    while(guess < i)
+    {
+      msg = ' you guessed ' + guess + ', that is too low ';
+      alert(user + msg);
+      guess = prompt(' guess again! ');
+    }
+
+    if(guess == i)
+    {
+      var answer = alert('you are right! lets move on!');
+    }
+
+
+// for loop portion
+
+  var transportation = prompt('What is the best way of transportation for Seattlites?');
+  var arr = ['car', 'bus', 'bike', 'walk'];
+
+  for (var i = 0; i < arr.length; i++)
+  {
+
+    if (transportation == 'car' || transportation == 'cars' || transportation == 'driving'){
+      alert('You said ' + transportation + ' is the best way to get around Seattle!');
+      break;
+    }
+    if (transportation == 'bus' || transportation == 'busses' || transportation == 'bussing'){
+      alert('You said ' + transportation + ' is the best way to get around Seattle!');
+      break;
+    }
+    if (transportation == 'bike' || transportation == 'bikes' || transportation == 'biking'){
+      alert('You said ' + transportation + ' is the best way to get around Seattle!');
+      break;
+    }
+    if (transportation == 'walk' || transportation == 'foot' || transportation == 'walking'){
+      alert('You said ' + transportation + ' is the best way to get around Seattle!');
+      break;
+    }
+  }

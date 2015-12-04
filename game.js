@@ -5,6 +5,7 @@ var user = prompt('What is your name?')
 console.log('the user variable ' + user);
 alert('Nice to virtually meet you, ' +  user + ', hope you are having a great day!')
 
+
 //beginning of guessing game portion
 var one = document.getElementById('one');
 var i = 0;
@@ -17,11 +18,13 @@ function quesOne(){
       i++;
       console.log('var i = ' + i);
       one.textContent = ('You are right! Dogs do bark!');
+      one.className = ('right');
       // console
     }
     else {
       // alert('You are incorrect, dogs do bark.');
-      one.textContent = ('You are incorrect, dogs do bark.')
+      one.textContent = ('You are incorrect, dogs do bark.');
+      one.className = ('wrong');
     }
 }
 quesOne();
@@ -35,11 +38,13 @@ function quesTwo() {
       // alert('You are right! Starbucks does sell coffee!');
       i++;
       console.log('var i = ' + i);
-      one.textContent = 'You are right! Starbucks does sell coffee!'
+      one.textContent = ('You are right! Starbucks does sell coffee!');
+      one.className = ('right');
     }
     else{
       // alert('Hmm, have you ever been to Starbucks? They sell a lot of coffee!');
-      one.textContent = ('Hmm, have you ever been to Starbucks? They sell a lot of coffee!')
+      one.textContent = ('Hmm, have you ever been to Starbucks? They sell a lot of coffee!');
+      one.className = ('wrong');
 
     }
   }
@@ -54,19 +59,21 @@ function quesThree(){
       // alert('You are right! Seattle is in Washington');
       i++;
       console.log('var i = ' + i);
-      one.textContent = ('You are right! Seattle is in Washington')
+      one.textContent = ('You are right! Seattle is in Washington');
+      one.className = ('right');
     }
     else{
       // alert('You are incorrect Seattle is in Washington.');
-      one.textContent = ('You are incorrect, Seattle is in Washington')
+      one.textContent = ('You are incorrect, Seattle is in Washington');
+      one.className = ('wrong');
     }
   }
 quesThree();
 
 
 var total = i;
-console.log('total = ' + i)
-alert('You have answered ' + i + ' out of 3 correct!')
+console.log('total = ' + i);
+alert('You have answered ' + i + ' out of 3 correct!');
 
 
 // while loop portion
@@ -86,6 +93,7 @@ function quesFour(){
           msg = ' you guessed ' + guess + ', that is too high ';
           one.textContent = (user + msg);
           guess = prompt(' guess again! ');
+          one.className = ('wrong');
         }
 
         while(guess < i)
@@ -93,11 +101,13 @@ function quesFour(){
           msg = ' you guessed ' + guess + ', that is too low ';
           one.textContent = (user + msg);
           guess = prompt(' guess again! ');
+          one.className = ('wrong');
         }
 
         if(guess == i)
         {
           var answer = one.textContent = ('you are right, my number is 3! lets move on!');
+          one.className = ('right');
         }
     }
   quesFour();
